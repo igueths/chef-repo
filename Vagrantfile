@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   ip_api = "192.168.50.4"
   ip_worker = "192.168.50.6"
   ip_db = "192.168.50.17"
+  ip_repose = "192.168.50.19"
 
   # Define the queue cluster:
   cluster_queue_name = "queue_cluster_1_2_3"
@@ -188,6 +189,28 @@ Vagrant.configure("2") do |config|
     end
   end
 
+  #TODO(jwood) Make this public:
+  if false
+  config.vm.define :barbican_repose do |barbican_repose|
+    barbican_repose.vm.hostname = "barbican-repose-test"
+
+    barbican_repose.vm.network :private_network, ip: "#{ip_repose}", :netmask => "255.255.0.0"
+    barbican_repose.vm.network :forwarded_port, guest: 8080, host: 8080
+
+    # Provision the node.
+    barbican_repose.vm.provision :chef_solo do |chef|
+      chef.roles_path = "roles"
+      chef.data_bags_path = "data_bags"
+      chef.arguments = '-l debug'
+      chef.run_list = [
+        "role[barbican-repose]"
+      ]
+      chef.json = {
+          "solo_api_host" => "#{ip_api}"
+      }
+    end
+  end
+  end
 
   config.berkshelf.enabled = true
   config.omnibus.chef_version = :latest
