@@ -9,7 +9,8 @@ cookbook 'database', github: 'opscode-cookbooks/database'
 cookbook 'python'
 
 cookbook 'rabbitmq', github: 'rackspace-cookbooks/rabbitmq'
-#TODO(jwood) Make public: cookbook 'repose', git: 'git://github.rackspace.com/cloud-identity-ops/cookbook-repose.git'
+#TODO(jwood) Make public: cookbook 'repose', git: 'git://github.rackspace.com/john-wood/cookbook-repose.git'
+#cookbook 'repose', git: 'git://github.rackspace.com/cloud-identity-ops/cookbook-repose.git'
 
 cookbook 'authorized_keys', github: 'cloudkeep/authorized_keys'
 cookbook 'repmgr', github: 'hw-cookbooks/repmgr'
