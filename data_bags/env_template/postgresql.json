@@ -1,0 +1,7 @@
+{
+  "id":"postgresql",
+  "password": {
+    "barbican":"put-pw-here",
+    "postgres":"put-pw-here"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "barbican-repose",
+  "description": "Barbican Repose service",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "node_group": {
+      "tag": "repose",
+      "description": "Barbican Repose Node"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[barbican-repose]"
+  ],
+  "env_run_lists": {
+  }
+}
