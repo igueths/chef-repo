@@ -1,4 +1,3 @@
-chef_api :config
 site :opscode
 
 cookbook 'yum', '= 2.2.4'
