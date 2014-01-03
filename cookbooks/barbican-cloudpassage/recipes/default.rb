@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: chef-cloudpassage
+# Cookbook Name:: barbican-cloudpassage
 # Recipe:: default
 #
 # Combined between:
