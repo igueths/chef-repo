@@ -17,7 +17,7 @@ cookbook 'barbican', path: './cookbooks/barbican'
 cookbook 'barbican-postgresql', path: './cookbooks/barbican-postgresql'
 cookbook 'barbican-rabbitmq', path: './cookbooks/barbican-rabbitmq'
 #TODO(jwood) Make public: cookbook 'barbican-repose', path: './cookbooks/barbican-repose'
-cookbook 'chef-cloudpassage', path: './cookbooks/chef-cloudpassage'
+cookbook 'barbican-cloudpassage', path: './cookbooks/barbican-cloudpassage'
 cookbook 'chef-statsd', github: 'hectcastro/chef-statsd'
 cookbook 'newrelic', github: 'escapestudios/chef-newrelic'
 

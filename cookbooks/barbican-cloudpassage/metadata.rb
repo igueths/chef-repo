@@ -1,4 +1,4 @@
-name             "chef-cloudpassage"
+name             "barbican-cloudpassage"
 maintainer       "Escape Studios"
 maintainer_email "dev@escapestudios.com"
 license          "MIT"
@@ -10,4 +10,4 @@ version          "0.1.3"
 supports os
 end
 
-recipe "chef-cloudpassage", "Installs cloudpassage."
+recipe "barbican-cloudpassage", "Installs cloudpassage."
