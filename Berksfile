@@ -1,6 +1,6 @@
 site :opscode
 
-cookbook 'yum', '= 2.2.4'
+cookbook 'yum', '= 3.0.4'
 cookbook 'ntp'
 cookbook 'graphite'
 cookbook 'postgresql', github: 'opscode-cookbooks/postgresql', tag: 'v3.2.0'
