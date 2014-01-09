@@ -18,11 +18,9 @@ knife environment from file environments/*.json
 berks upload
 
 # Upload custom cookbooks.
-knife cookbook upload barbican-base
-knife cookbook upload barbican-api
-knife cookbook upload barbican-db
-knife cookbook upload barbican-queue
-knife cookbook upload barbican-worker
+knife cookbook upload barbican
+knife cookbook upload barbican-rabbitmq
+knife cookbook upload barbican-postgresql
 knife cookbook upload barbican-repose
 knife cookbook upload barbican-cloudpassage
 knife cookbook upload authorized_keys
