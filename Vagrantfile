@@ -19,8 +19,9 @@ Vagrant.configure("2") do |config|
   cluster_queue_name = "queue_cluster_1_2_3"
   nodes_queue = [
     { :vmname => 'barbican_queue_1', :hostname => 'barbican-queue-test-1', :ip => '192.168.50.8'},
-    { :vmname => 'barbican_queue_2', :hostname => 'barbican-queue-test-2', :ip => '192.168.50.9'},
-    #{ :vmname => 'barbican_queue_3', :hostname => 'barbican-queue-test-3', :ip => '192.168.50.10'}
+    #TODO(jwood) Can't run multiple queue currently:
+    #  { :vmname => 'barbican_queue_2', :hostname => 'barbican-queue-test-2', :ip => '192.168.50.9'},
+    #  { :vmname => 'barbican_queue_3', :hostname => 'barbican-queue-test-3', :ip => '192.168.50.10'}
   ]
 
   nodes_queue.each do |node|
@@ -30,6 +31,7 @@ Vagrant.configure("2") do |config|
       barbican_queue.vm.network :private_network, ip: node[:ip], :netmask => "255.255.0.0"
       #barbican_queue.vm.network :forwarded_port, guest: 22, host: 2208, auto_correct: true
       #barbican_queue.vm.network :forwarded_port, guest: 80, host: 8008, auto_correct: true
+      #barbican_queue.vm.network :forwarded_port, guest: 5672, host: 5672, auto_correct: true
       barbican_queue.vm.network :forwarded_port, guest: 15672, host: 15672, auto_correct: true
 
       # Provision the node.
