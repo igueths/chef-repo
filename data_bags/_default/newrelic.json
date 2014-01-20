@@ -1,0 +1,11 @@
+{
+  "id":"newrelic",
+  "server_monitoring": {
+    "license":"<license here>",
+    "logfile":"/var/log/barbican/newrelic.log",
+    "loglevel":"debug"
+  },
+  "application_monitoring": {
+    "license":"<license here>"
+  }
+}
