@@ -1,6 +1,7 @@
 site :opscode
 
-cookbook 'yum', '= 3.0.4'
+cookbook 'yum', github: 'opscode-cookbooks/yum', tag: 'v3.0.4'
+cookbook 'yum-epel', github: 'opscode-cookbooks/yum-epel', tag: 'v0.2.0'
 cookbook 'ntp'
 cookbook 'graphite'
 cookbook 'postgresql', github: 'opscode-cookbooks/postgresql', tag: 'v3.2.0'
@@ -8,6 +9,7 @@ cookbook 'database', github: 'opscode-cookbooks/database'
 cookbook 'python'
 
 cookbook 'rabbitmq', github: 'rackspace-cookbooks/rabbitmq'
+cookbook 'erlang', github: 'opscode-cookbooks/erlang'
 #TODO(jwood) Make public: cookbook 'repose', git: 'git://github.rackspace.com/john-wood/cookbook-repose.git'
 #cookbook 'repose', git: 'git://github.rackspace.com/cloud-identity-ops/cookbook-repose.git'
 
