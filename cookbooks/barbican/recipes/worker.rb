@@ -31,6 +31,10 @@ include_recipe "barbican::_base"
   end
 end
 
+package "python-psycopg2" do
+  action :install
+end
+
 postgres_bag = data_bag_item("#{node.chef_environment}", 'postgresql')
 host_name = "#{node[:barbican_api][:host_name]}"
 enable_queue = "#{node[:barbican_api][:enable_queue]}"
