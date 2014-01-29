@@ -75,7 +75,7 @@ end
 if connection.empty?
   connection = "postgresql+psycopg2://#{db_user}:#{db_pw}@#{db_ip}:5432/#{db_name}"
 end
-queue_ips = q_ips.map{|n| "kombu://guest@#{n}/"}.join(',')
+queue_ips = q_ips.map{|n| "#{n}:5672"}.join(',')
 Chef::Log.debug "queue_ips: #{queue_ips}"
 
 # Configure based on external dependencies.
